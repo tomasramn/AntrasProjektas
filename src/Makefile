@@ -1,15 +1,10 @@
-CC=g++
+App: V1.1.o funkcijos.o
+	g++ V1.1.o funkcijos.o -o3 App
 
-all: Application
-	
-Application: main.o func.o
-	$(CC) V1.0.o funkcijos.o -o Application
-
-main.o: V1.0.cpp funkcijos.h
-	$(CC) -c ND2_v1.0.cpp Header.h
+V1.1.o: V1.1.cpp funkcijos.h
+	g++ -c ND2_v1.0.cpp funkcijos.h
 
 func.o: funkcijos.cpp funkcijos.h struktura.h
-	$(CC) -c funkcijos.cpp funkcijos.h struktura.h
+	g++ -c funkcijos.cpp funkcijos.h struktura.h
 
-clean:
-	rm *.o *.gch Application
+clean: rm *.o *.gch App
