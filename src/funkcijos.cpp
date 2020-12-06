@@ -552,7 +552,7 @@ void surusiuok3klase(vector<studentasc>& studinfo, vector<studentasc>& vargsiuka
 		vargsiukai = vector<studentasc>(studinfo.begin(), it); // nukopijuoja
 		studinfo.erase(studinfo.begin(), it);
 	}
-	catch (std::exception& e) {
+	catch (exception& e) {
 		cout << "Ivyko klaida vector failo skirstyme \n";
 	}
 }
